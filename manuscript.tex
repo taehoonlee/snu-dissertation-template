@@ -1,0 +1,52 @@
+\documentclass[11pt]{report}
+\usepackage[paperwidth=19cm,paperheight=26cm,left=3cm,right=3cm,top=3.5cm,bottom=1.5cm]{geometry}
+\addtolength{\voffset}{-1.5cm}
+\renewcommand{\baselinestretch}{1.7}
+\renewcommand{\abstractname}{\large Abstract}
+\usepackage{setspace}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{kotex}
+
+\usepackage{natbib}
+
+\begin{document}
+
+\pagenumbering{roman}
+
+\begin{titlepage}
+\input{title}
+\end{titlepage}
+
+\begin{abstract}\addcontentsline{toc}{chapter}{Abstract}\setcounter{page}{3}
+abstract contents abstract contents abstract contents
+\end{abstract}\setcounter{page}{5}
+
+{
+\setstretch{1.45}
+\tableofcontents
+\listoffigures\addcontentsline{toc}{chapter}{List of Figures}
+\listoftables\addcontentsline{toc}{chapter}{List of Tables}
+}
+
+\chapter{Introduction}\label{c:intro}\pagenumbering{arabic}
+
+\section{Deep neural networks}
+
+\cite{Gatys15,Noh15,Weston15}
+
+\chapter{Background}\label{c:background}
+
+\section{Basic operations for deep networks}
+
+\chapter{Conclusion}\label{c:con}
+
+\section{Dissertation summary}
+
+\section{Future work}
+
+\bibliographystyle{plain}
+\bibliography{bib/background}\addcontentsline{toc}{chapter}{Bibliography}
+
+\end{document} 
